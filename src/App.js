@@ -1,9 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/image/logo.svg';
+import './assets/App.css';
+import './routes/index';
+import { MainRouter } from './routes/index';
+import { Col, Row } from 'antd';
+import Sidebar from './components/Layout/Sidebar';
 
 function App() {
   return (
     <div className="App">
+      <MainRouter/>
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
