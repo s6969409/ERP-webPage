@@ -1,9 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
-import { Layout} from "antd";
 //import styled from "styled-components";
 
-const { Content, Sider } = Layout;
 /*
 const MyContent = styled(Content)`
   padding: 15px 10px;
