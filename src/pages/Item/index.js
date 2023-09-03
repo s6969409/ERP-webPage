@@ -6,6 +6,7 @@ export default function () {
   const [editData, setEditData] = useState();
   const [rdData, setRdData] = useState([]);
   const [columns, setColumns] = useState([]);
+  const [addDataDefault, setaAddDataDefault] = useState({});
   useEffect(() => {
     PropertiesGet().then(e => {
       const ps = e.data.data.map(p => {
@@ -31,11 +32,17 @@ export default function () {
           </>
         )
       }])
+
+      const dataDefalut = {}
+      e.data.data.forEach(d => {
+        dataDefalut[d.name] = d.type;
+      })
+      setaAddDataDefault(dataDefalut)
     });
   }, [])
 
   const addData = () => {
-    setRdData([...rdData,{K:"AA"}])
+    setRdData([...rdData,addDataDefault])
   }
   return <>
     <Button type="primary" onClick={addData}>Add data</Button>
