@@ -13,8 +13,8 @@ export const apiAdd = (data) => axios({
   method: "POST",
   data
 })
-export const apiUpdate = (name, data) => axios({
-  url: `/varTypes/${name}`,
+export const apiUpdate = (data) => axios({
+  url: `/varTypes`,
   method: "PUT",
   data
 })

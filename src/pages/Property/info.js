@@ -1,5 +1,4 @@
 import { Button, Col, Form, Input, Row, Select } from "antd"
-import axios from "../../api/axios";
 import { apiAdd, apiRemove, apiUpdate } from "./api";
 import { useState } from "react";
 
@@ -56,7 +55,7 @@ export default function ({ data, closeCmd }) {
     if (isAdd) {
       await apiAdd(result).then(e => closeCmd())
     } else {
-      await apiUpdate(result.name, result).then(e => closeCmd())
+      await apiUpdate(result).then(e => closeCmd())
     }
 
   }
